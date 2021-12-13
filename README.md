@@ -1,4 +1,4 @@
-# React_practice
+# React Cheat Sheet
 
 Notes from Scrimba 
 
