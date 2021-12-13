@@ -35,30 +35,96 @@ React is declarative and knows what we want to do just by writing jsx unlike imp
 
 ---
 
-
-
 ### Basic syntax of React
 ````
 ReactDOM.render(<h1>Hello world</h1>, document.getElementById("root"))
-   # rendering (html you want, where in html)
-   
-# another example 
+   // rendering (html you want, where in html)
+````
+````
+// another example 
 ReactDOM.render(
   <ul><li>Hello</li><li>Hola</li></ul>, 
   document.querySelector("#root")
 )
 ````
 
+### Learn about JSX
+
+JavaScript XML <br>
+The html inside our JS 
+
+What can you do? 
+````
+// Assign to a variable 
+const element = <h1 className="header">This is JSX</h1>
+
+// Parent and child elements into a variable
+const page = (
+    <div>
+        <h1 className="header">This is JSX</h1>
+        <p>This is a paragraph</p>
+    </div>
+)
+````
+Let's console log this `element`
+````
+console.log(element)
+
+// Return JS object!
+/*
+{
+    type: "h1", 
+    key: null, 
+    ref: null, 
+    props: {
+      className: "header", 
+      children: "This is JSX"
+    }, 
+    _owner: null, 
+    _store: {}
+}
+ */
+ ````
+ Returns objects that React can interpret and use to create actual elements that get put on the screen. 
+ ````
+ReactDOM.render(element, document.getElementById("root"))
+````
+Some syntax differences:
+````
+// className instead of class
+ReactDOM.render(<h1 className="header">This is JSX</h1>, document.getElementById("root"))
+````
+⚠️ Caution
+
+Only return a single parent element. The following will result in an error: 
+````
+ReactDOM.render(
+    <h1 className="header">This is JSX</h1><p>This is a paragraph</p>, 
+    document.getElementById("root")
+)
+````
+Instead, create a parent element (div) and put the child elements inside the parent
+````
+ReactDOM.render(
+    <div>
+        <h1 className="header">This is JSX</h1>
+        <p>This is a paragraph</p>
+    </div>,
+    document.getElementById("root")
+)
+````
+
+
 ### How to create components 
 ````
-# 1. In js file create a function 
+// 1. In js file create a function 
 function MainContent() {
   return (
     <h1>I'm learning React!</h1>
   )
 }
 
-# 2. Call funtion in render
+// 2. Call funtion in render
 ReactDOM.render(
   <div>
     <MainContent />
