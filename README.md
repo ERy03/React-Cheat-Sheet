@@ -148,5 +148,27 @@ ReactDOM.render(<h1 className="header">This is JSX</h1>, document.getElementById
 ````
 ---
 
+### Why do we use ReactDOM.render? 
+we have JSX saved in a varaible called `page`
+````
+const page = (
+    <h1>hello</h1>
+)
+````
+what happens when we `document.getElementById("root").append(page)`?
+````
+[object Object]
+````
+Let's use `JSON.stringify(page)`
+````
+document.getElementById("root").append(JSON.stringify(page))
+
+// output
+{"type":"h1","key":null,"ref":null,"props":{"children":"hello"},"_owner":null,"_store":{}}
+````
+JSX returns plain JS objects. Has nothing to do with DOM. It's not recognized by the browser. 
+
+That's why we need to render using `ReactDOM.render`.     
+React takes this JS objects and turns them in real DOM elements that the browser can interpret. 
 
 
