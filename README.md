@@ -1,4 +1,5 @@
-# React Cheat Sheet
+# React Cheat Sheet <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" />
+
 
 Notes from Scrimba 
 
@@ -30,7 +31,7 @@ h1.textContent = "Hello, React!"
 h1.className = "header"
 document.getElementById("root").append(h1)
 ````
-React is declarative and knows what we want to do just by writing html unlike imperative Vanilla Js. Shorter code and simple to use 👍
+React is declarative and knows what we want to do just by writing jsx unlike imperative Vanilla Js. Shorter code and simple to use 👍
 
 ---
 
