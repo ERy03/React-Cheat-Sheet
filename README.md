@@ -13,17 +13,22 @@ Notes from Scrimba
   
 - React is declarative! 
 
-     What? 🤔 
+     What? 🤔  
+     <br>
 
-Let's learn about the difference between declarative and imperative
+Let's learn about the difference between declarative and imperative   
+<br>
 
----
-Declartive (React)
+**> Declartive (React)**
+
 - "Just tell me what to do and I'll figure out how to do it"
 ````
 ReactDOM.render(<h1 className="header">Hello, React!</h1>, document.getElementById("root"))
 ````
-Imperative (Vanilla JS)
+<br>
+
+**> Imperative (Vanilla JS)**
+
 - "I need you to describe step by step how to do something and I'll do it"
 ````
 const h1 = document.createElement("h1")
@@ -31,6 +36,8 @@ h1.textContent = "Hello, React!"
 h1.className = "header"
 document.getElementById("root").append(h1)
 ````
+<br>
+
 React is declarative and knows what we want to do just by writing jsx unlike imperative Vanilla Js. Shorter code and simple to use 👍
 
 ---
@@ -47,6 +54,26 @@ ReactDOM.render(
   document.querySelector("#root")
 )
 ````
+### How to create components
+
+1. In js file create a function 
+````
+function MainContent() {
+  return (
+    <h1>I'm learning React!</h1>
+  )
+}
+````
+2. Call funtion in render
+````
+ReactDOM.render(
+  <div>
+    <MainContent />
+  </div>,
+  document.getElementById("root")
+)
+````
+---
 
 ### Learn about JSX
 
@@ -85,15 +112,14 @@ console.log(element)
 }
  */
  ````
- Returns objects that React can interpret and use to create actual elements that get put on the screen. 
+ Returns objects that React can interpret and use to create actual elements that get put on the screen.   
+ <br>
+ Now let's call the variable in our render
  ````
 ReactDOM.render(element, document.getElementById("root"))
 ````
-Some syntax differences:
-````
-// className instead of class
-ReactDOM.render(<h1 className="header">This is JSX</h1>, document.getElementById("root"))
-````
+<br>
+
 ⚠️ Caution
 
 Only return a single parent element. The following will result in an error: 
@@ -113,22 +139,14 @@ ReactDOM.render(
     document.getElementById("root")
 )
 ````
+<br>
 
-
-### How to create components 
+Some syntax differences:
 ````
-// 1. In js file create a function 
-function MainContent() {
-  return (
-    <h1>I'm learning React!</h1>
-  )
-}
-
-// 2. Call funtion in render
-ReactDOM.render(
-  <div>
-    <MainContent />
-  </div>,
-  document.getElementById("root")
-)
+// className instead of class
+ReactDOM.render(<h1 className="header">This is JSX</h1>, document.getElementById("root"))
 ````
+---
+
+
+
