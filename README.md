@@ -55,13 +55,11 @@ yarn start
 
 #### Images 
 1. Create a `images` folder inside src folder
-2. import image
+2. import image and call it!
 ```` javascript
 import reactLogo from "../images/name-of-image.png" 
 // it can be any name
-````
-3. call it 
-```` javascript
+
 <img 
   src={reactLogo}
 />
@@ -268,9 +266,10 @@ ReactDOM.render(<Page />, document.getElementById("root"))
 
 ### Separating components in React
 
-1. Create a new file `NameOfComponent.js`
-2. `import React from "react"`
-3. export using one of the following:
+1. Create a new folder called components
+2. Inside of the folder, create a new file `NameOfComponent.js`
+3. `import React from "react"`
+4. export using one of the following:
 ```` javascript
 // In the end
 export default Header // name of function 
@@ -282,11 +281,20 @@ export default function Header() {
   )
 }
 ````
-4. import component in index.js      
-`import Header from "./Header"`
+5. import component in index.js      
+`import Header from "/components/Header"`
 
 ---
 
+### Tips 
 
+1. Create a mental outline of the elements of the page    
+
+  - What elements do you need?
+  - What css layouts do you need?
+  - How many components do you need?  
+
+<img align="left" src="https://user-images.githubusercontent.com/76512208/146034956-14ccdddd-5e11-4244-87df-7e4d9b059da6.png" width="400" height="400">
+<img align="right" src="https://user-images.githubusercontent.com/76512208/146035050-8c742022-8857-43a0-a20a-b90036522c6e.png" width="400" height="400">
 
 
