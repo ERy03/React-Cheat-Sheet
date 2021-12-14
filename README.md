@@ -294,7 +294,7 @@ export default function Header() {
   - What css layouts do you need?
   - How many components do you need?  
 
-<img align="left" src="https://user-images.githubusercontent.com/76512208/146034956-14ccdddd-5e11-4244-87df-7e4d9b059da6.png" width="400" height="400">
-<img align="right" src="https://user-images.githubusercontent.com/76512208/146035050-8c742022-8857-43a0-a20a-b90036522c6e.png" width="400" height="400">
+<img align="left" src="https://user-images.githubusercontent.com/76512208/146034956-14ccdddd-5e11-4244-87df-7e4d9b059da6.png" width="350" height="400">
+<img align="right" src="https://user-images.githubusercontent.com/76512208/146035050-8c742022-8857-43a0-a20a-b90036522c6e.png" width="350" height="400">
 
 
