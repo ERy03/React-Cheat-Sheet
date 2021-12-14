@@ -188,6 +188,9 @@ React takes this JS objects and turns them in real DOM elements that the browser
 
 ### Creating custom components 
 
+What is a React component?              
+A function that returns React elements (or UI).    
+
 Use pascal case 
           
 `function PascalCase()`
@@ -212,3 +215,27 @@ function Page() {
 
 ReactDOM.render(<Page />, document.getElementById("root"))
 ````
+
+Parent children components    
+
+In the example below, `Page` is the parent component and `<Header />`, `<MainContent />`, `<Footer />` are child components.
+
+```` javascript
+function Page() {              
+    return (
+        <div>
+            <Header />         
+            <MainContent />
+            <Footer />
+        </div>
+    )
+}
+
+ReactDOM.render(<Page />, document.getElementById("root"))
+````
+
+---
+
+
+
+
