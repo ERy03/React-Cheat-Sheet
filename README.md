@@ -49,6 +49,26 @@ npx create-react-app app-name
 cd app-name
 yarn start
 ````
+#### Styling
+1. Create a `style.css` file in the src folder
+2. In index.js file `import "./style.css"`
+
+#### Images 
+1. Create a `images` folder inside src folder
+2. import image
+```` javascript
+import reactLogo from "../images/name-of-image.png" 
+// it can be any name
+````
+3. call it 
+```` javascript
+<img 
+  src={reactLogo}
+/>
+````
+Ensures that there are no broken images
+
+📚 More info: https://create-react-app.dev/docs/adding-images-fonts-and-files/
 
 ---
 
