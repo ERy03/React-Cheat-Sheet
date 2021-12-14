@@ -42,6 +42,16 @@ React is declarative and knows what we want to do just by writing jsx unlike imp
 
 ---
 
+### Set-up
+
+````bash
+npx create-react-app app-name
+cd app-name
+yarn start
+````
+
+---
+
 ### To do
 
 In your index.js file:
@@ -142,7 +152,7 @@ ReactDOM.render(
     document.getElementById("root")
 )
 ````
-Instead, create a parent element (div) and put the child elements inside the parent
+Instead, create a parent element (div) and put child elements inside the parent
 ```` javascript
 ReactDOM.render(
     <div>
@@ -240,7 +250,7 @@ ReactDOM.render(<Page />, document.getElementById("root"))
 
 1. Create a new file `NameOfComponent.js`
 2. `import React from "react"`
-3. export 
+3. export using one of the following:
 ```` javascript
 // In the end
 export default Header // name of function 
