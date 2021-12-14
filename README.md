@@ -6,7 +6,7 @@ Notes from Scrimba
 ### Why learn React?
 - It's Composable 
   - Think it as building something using lego blocks 
-  - You connect blocks together to build the final product
+  - You connect small blocks together to build the page
 - Building custom components 
   - maintainable
   - flexible
@@ -184,4 +184,31 @@ JSX returns plain JS objects. Has nothing to do with DOM. It's not recognized by
 That's why we need to render using `ReactDOM.render`.     
 React takes this JS objects and turns them in real DOM elements that the browser can interpret. 
 
+---
 
+### Creating custom components 
+
+Use pascal case 
+          
+`function PascalCase()`
+
+Calling React Component
+```` javascript 
+ReactDOM.render(<PascalCase />, document.getElementById("root"))
+````
+Example   
+```` javascript 
+import React from "react"
+import ReactDOM from "react-dom"
+
+function Page() {
+    return (
+        <ol>
+            <li>Cool</li>
+            <li>Amazing</li>
+        </ol>
+    )
+}
+
+ReactDOM.render(<Page />, document.getElementById("root"))
+````
