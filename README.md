@@ -6,7 +6,7 @@ Notes from Scrimba
 ### Why learn React?
 - It's Composable 
   - Think it as building something using lego blocks 
-  - You connect small blocks together to build the page
+  - You connect small blocks together to build the 
 - Building custom components 
   - maintainable
   - flexible
@@ -233,6 +233,27 @@ function Page() {
 
 ReactDOM.render(<Page />, document.getElementById("root"))
 ````
+
+---
+
+### Separating components in React
+
+1. Create a new file `NameOfComponent.js`
+2. `import React from "react"`
+3. export 
+```` javascript
+// In the end
+export default Header // name of function 
+
+// When defining function
+export default function Header() {
+  return (
+    ...
+  )
+}
+````
+4. import component in index.js      
+`import Header from "./Header"`
 
 ---
 
