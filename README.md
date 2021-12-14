@@ -22,7 +22,7 @@ Let's learn about the difference between declarative and imperative
 **> Declartive (React)**
 
 - "Just tell me what to do and I'll figure out how to do it"
-````
+```` javascript
 ReactDOM.render(<h1 className="header">Hello, React!</h1>, document.getElementById("root"))
 ````
 <br>
@@ -30,7 +30,7 @@ ReactDOM.render(<h1 className="header">Hello, React!</h1>, document.getElementBy
 **> Imperative (Vanilla JS)**
 
 - "I need you to describe step by step how to do something and I'll do it"
-````
+```` javascript
 const h1 = document.createElement("h1")
 h1.textContent = "Hello, React!"
 h1.className = "header"
@@ -42,12 +42,25 @@ React is declarative and knows what we want to do just by writing jsx unlike imp
 
 ---
 
-### Basic syntax of React
+### To do
+
+In your index.js file:
+```` javascript 
+import React from 'react'
+import ReactDOM from 'react-dom'
 ````
+
+Why import React?     
+React is what defines JSX. In other words, without React we cannot use JSX 
+
+---
+
+### Basic syntax of React
+```` javascript
 ReactDOM.render(<h1>Hello world</h1>, document.getElementById("root"))
    // rendering (html you want, where in html)
 ````
-````
+```` javascript
 // another example 
 ReactDOM.render(
   <ul><li>Hello</li><li>Hola</li></ul>, 
@@ -57,15 +70,15 @@ ReactDOM.render(
 ### How to create components
 
 1. In js file create a function 
-````
+```` javascript
 function MainContent() {
   return (
     <h1>I'm learning React!</h1>
   )
 }
-````
+```` 
 2. Call funtion in render
-````
+```` javascript
 ReactDOM.render(
   <div>
     <MainContent />
@@ -81,7 +94,7 @@ JavaScript XML <br>
 The html inside our JS 
 
 What can you do? 
-````
+```` javascript
 // Assign to a variable 
 const element = <h1 className="header">This is JSX</h1>
 
@@ -94,7 +107,7 @@ const page = (
 )
 ````
 Let's console log this `element`
-````
+```` javascript
 console.log(element)
 
 // Return JS object!
@@ -115,7 +128,7 @@ console.log(element)
  Returns objects that React can interpret and use to create actual elements that get put on the screen.   
  <br>
  Now let's call the variable in our render
- ````
+ ```` javascript
 ReactDOM.render(element, document.getElementById("root"))
 ````
 <br>
@@ -123,14 +136,14 @@ ReactDOM.render(element, document.getElementById("root"))
 ⚠️ Caution
 
 Only return a single parent element. The following will result in an error: 
-````
+```` javascript
 ReactDOM.render(
     <h1 className="header">This is JSX</h1><p>This is a paragraph</p>, 
     document.getElementById("root")
 )
 ````
 Instead, create a parent element (div) and put the child elements inside the parent
-````
+```` javascript
 ReactDOM.render(
     <div>
         <h1 className="header">This is JSX</h1>
@@ -142,7 +155,7 @@ ReactDOM.render(
 <br>
 
 Some syntax differences:
-````
+```` javascript
 // className instead of class
 ReactDOM.render(<h1 className="header">This is JSX</h1>, document.getElementById("root"))
 ````
@@ -150,7 +163,7 @@ ReactDOM.render(<h1 className="header">This is JSX</h1>, document.getElementById
 
 ### Why do we use ReactDOM.render? 
 we have JSX saved in a varaible called `page`
-````
+```` javascript
 const page = (
     <h1>hello</h1>
 )
@@ -160,7 +173,7 @@ what happens when we `document.getElementById("root").append(page)`?
 [object Object]
 ````
 Let's use `JSON.stringify(page)`
-````
+```` javascript
 document.getElementById("root").append(JSON.stringify(page))
 
 // output
