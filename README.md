@@ -6,7 +6,7 @@ Notes from Scrimba
 ### Why learn React?
 - It's Composable 
   - Think it as building something using lego blocks 
-  - You connect small blocks together to build the 
+  - You connect small blocks together to build a page
 - Building custom components 
   - maintainable
   - flexible
